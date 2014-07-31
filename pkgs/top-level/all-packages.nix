@@ -2936,6 +2936,8 @@ let
     inherit (pythonPackages) nose mock;
   };
 
+  synapse = callPackage ../applications/misc/synapse { };
+
   sysbench = callPackage ../development/tools/misc/sysbench {};
 
   system_config_printer = callPackage ../tools/misc/system-config-printer {
