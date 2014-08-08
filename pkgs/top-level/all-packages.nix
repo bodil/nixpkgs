@@ -11876,6 +11876,8 @@ let
 
   smtube = callPackage ../applications/video/smtube {};
 
+  spike = callPackage ../applications/misc/spike { };
+
   sup = callPackage ../applications/networking/mailreaders/sup {
     ruby = ruby_1_9_3.override { cursesSupport = true; };
   };
