@@ -11394,6 +11394,10 @@ let
     xcb-util-cursor = if stdenv.isDarwin then xcb-util-cursor-HEAD else xcb-util-cursor;
   };
 
+  i3blocks = callPackage ../applications/window-managers/i3/blocks.nix {
+    inherit (haskellPackages) pandoc;
+  };
+
   i3lock = callPackage ../applications/window-managers/i3/lock.nix {
     inherit (xorg) libxkbfile;
     cairo = cairo.override { xcbSupport = true; };
