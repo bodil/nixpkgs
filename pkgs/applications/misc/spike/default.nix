@@ -1,4 +1,4 @@
-{ stdenv, fetchgit, qt53 }:
+{ stdenv, fetchgit, qt5 }:
 
 stdenv.mkDerivation {
   name = "spike-1.1";
@@ -17,7 +17,7 @@ stdenv.mkDerivation {
     sha256 = "1j08kfk6s8nimcy6h4ml3pr8ynh7k17ykhhg3binazhxhxgp9cml";
   };
 
-  buildInputs = [ qt53 ];
+  buildInputs = [ qt5 ];
 
   configurePhase = "qmake PREFIX=$out";
 
